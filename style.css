@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h3 {
+  text-align: center;
+  margin: 3rem auto -2rem;
+  color: aqua;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fan-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fan-container .fanNet {
+  width: 20rem;
+  height: 20rem;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid white;
+}
+
+.fan-container .fanNet .fanWings {
+  width: 100%;
+  height: 100%;
+  background: white;
+  background: url("FANWINGS.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.animation {
+	animation: rotate 1s linear infinite;
+}
+
+.animation1X {
+	animation: rotate 0.5s linear infinite;
+}
+
+.animation2X {
+	animation: rotate 0.08s linear infinite;
+	
+}
+
+.animation3X {
+	animation: rotate 0.01s linear infinite;
+}
+
+.stand {
+	width: 1.5rem;
+	height: 10rem;
+	background-color: white;
+}
+
+.disable {
+	pointer-events: none;
+	color: #e0dada !important;
+	background-color: grey !important;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.fan-container .btn-container {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 40px;
+  outline: 1px solid white;
+  padding: 1rem;
+
+}
+
+.fan-container .btn-container .btn {
+  padding: 8px 12px;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: dodgerblue;
+}
+
+.fan-container .btn-container .btn.start {
+  background: green;
+}
+
+.fan-container .btn-container .btn.stop {
+  background: red;
+}
